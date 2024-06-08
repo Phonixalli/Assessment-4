@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Newsletter Signup - XYZ Corporation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Centering the form and its elements */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            width: 50%;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        label, input, textarea, .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 0 5px; /* Horizontal spacing */
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 40%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Adjustments for radio buttons and checkboxes */
+        .form-group div {
+            display: flex;
+            flex-direction: row; /* Ensure horizontal layout */
+            flex-wrap: nowrap; /* Prevent wrapping */
+            align-items: center;
+            justify-content: center; /* Center-align the checkboxes and radio buttons */
+            gap: 10px; /* Add spacing between items */
+        }
+
+        .form-group label {
+            margin-bottom: 5px; /* Add some spacing between label and input */
+        }
+
+        /* Make all titles bold */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            alert("Welcome to the XYZ Corporation - Newsletter Signup");
+        };
+
+        function validateForm() {
+            var firstName = document.forms["signupForm"]["firstName"].value;
+            var lastName = document.forms["signupForm"]["lastName"].value;
+            if (firstName == "" || lastName == "") {
+                alert("First Name and Last Name must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Newsletter Signup</h1>
+    </header>
+    <main>
+        <form name="signupForm" action="http://csusap.csu.edu.au/cgi-bin/echo_form" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="firstName"><strong>First Name:</strong></label>
+                <input type="text" id="firstName" name="firstName" maxlength="60" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName"><strong>Last Name:</strong></label>
+                <input type="text" id="lastName" name="lastName" maxlength="60" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><strong>Email Address:</strong></label>
+                <input type="email" id="email" name="email" maxlength="60" required>
+            </div>
+            <div class="form-group">
+                <label><strong>Age Range:</strong></label>
+                <div>
+                    <input type="radio" name="age" value="15-25"> 15-25
+                    <input type="radio" name="age" value="26-35"> 26-35
+                    <input type="radio" name="age" value="36-45"> 36-45
+                    <input type="radio" name="age" value="46-55"> 46-55
+                    <input type="radio" name="age" value="55+"> 55+
+                </div>
+            </div>
+            <div class="form-group">
+                <label><strong>Services Interested In:</strong></label>
+                <div>
+                    <input type="checkbox" name="services" value="Service1"> Tour Operators
+                    <input type="checkbox" name="services" value="Service2"> Travel Agents
+                    <input type="checkbox" name="services" value="Service3"> Accommodation
+                    <input type="checkbox" name="services" value="Service4"> Transport
+                    <input type="checkbox" name="services" value="Service5"> Flights
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comments"><strong>Comments:</strong></label>
+                <textarea id="comments" name="comments" cols="60" rows="3"></textarea>
+            </div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+    <footer>&copy; 2024. All rights reserved.</footer>
+</body>
+</html>

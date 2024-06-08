@@ -1,0 +1,276 @@
+body {
+    background-color: #f3f3f1;
+    font-family: "Arial", "Helvetica", "Verdana", sans-serif;
+    margin: 0;
+    font-size: 95%;
+    text-align: left;
+    color: #333;
+}
+
+header {
+    background-color: #d0d0c8;
+    margin: auto;
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    border: 2px solid #c0c0c0;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Palatino, serif;
+    font-size: 3em;
+    color: #000000;
+    margin: auto;
+    padding: 1% 0;
+    text-align: center;
+    font-weight: lighter;
+}
+
+/* Updated CSS for navigation bar with CSS buttons */
+nav {
+    margin: auto;
+    padding: 0;
+    background-color: #f3f3f1;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #c0c0c0;
+    border-radius: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav a {
+    font-size: 20px;
+    text-decoration: none; /* Remove underline */
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #c0c0c0; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #ddd; /* Add background color */
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+nav a:hover {
+    background-color: #bbb; /* Change background color on hover */
+}
+
+h2 {
+    font-size: 2em;
+    font-style: italic;
+    color: #325d81;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    font-size: 0.75em;
+    opacity: 0.65;
+    margin: auto;
+    text-align: center;
+    color: #5e5e5e;
+    padding: 5%;
+}
+
+#container {
+    background-color: #ffffff;
+    width: 80%;
+    margin: auto;
+    margin-top: 0%;
+}
+
+#content {
+    background-color: #ffffff;
+    width: 80%;
+    margin: auto;
+    padding: 5%;
+}
+
+img.centered {
+    display: block;
+    margin: auto;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.text-color-blue {
+    color: blue;
+}
+
+.text-color-green {
+    color: green;
+}
+
+.background-color-lightgray {
+    background-color: lightgray;
+}
+
+.background-color-lightblue {
+    background-color: lightblue;
+}
+
+.font-style-italic {
+    font-style: italic;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.font-size-large {
+    font-size: 120%;
+}
+
+.font-family-custom {
+    font-family: "Times New Roman", serif;
+}
+
+.paragraph-aligned-left {
+    text-align: left;
+}
+
+.paragraph-aligned-center {
+    text-align: center;
+}
+
+.paragraph-aligned-right {
+    text-align: right;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.text-decoration-overline {
+    text-decoration: overline;
+}
+
+.list-container {
+    text-align: center;
+}
+
+.square-list {
+    list-style-type: square;
+}
+
+.roman-list {
+    list-style-type: upper-roman;
+}
+
+.square-list li,
+.roman-list li {
+    text-align: center;
+}
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+
+ol {
+    text-align: center;
+    list-style-position: inside;
+}
+
+@media print {
+    /* Hide navigation bar */
+    nav {
+        display: none;
+    }
+    
+    /* Remove background color/image */
+    body {
+        background-color: white;
+        background-image: none;
+    }
+    
+    /* Increase font size */
+    body {
+        font-size: 18px;
+    }
+    
+    .table-container {
+        text-align: center; /* Center-align the content horizontally */
+        margin: auto; /* Center-align the content vertically */
+        width: 80%; /* Adjust the width of the container */
+    }
+    
+    .table-container table {
+        margin: auto; /* Center-align the table within the container */
+    }
+    
+    .table-container th,
+    .table-container td {
+        padding: 8px; /* Add some padding to the table cells */
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 50%;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+    
+    label, input, textarea, .form-group {
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin: 0 10px;
+    }
+    
+    input[type="submit"],
+    input[type="reset"] {
+        width: 40%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+        background-color: #45a049;
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+}
